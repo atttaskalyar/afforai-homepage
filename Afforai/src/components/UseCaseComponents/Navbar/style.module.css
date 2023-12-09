@@ -1,0 +1,33 @@
+
+
+.navbarButtonsContainer{
+    gap: 0.5rem;
+    display: flex;
+}
+
+.navbarLinksContainer{
+    display: none;
+}
+
+.navbarLinkText{
+    color: rgb(17, 17, 17);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.navbarLink{
+    padding: 8px;
+}
+
+
+
+@media(min-width:786px){
+    .navbarContainer{
+        padding: 1.5rem 3rem;
+        max-width: 1024px;
+    }
+    .navbarLinksContainer{
+        display: flex;
+    }
+}
