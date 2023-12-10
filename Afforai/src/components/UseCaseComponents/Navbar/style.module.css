@@ -3,6 +3,12 @@
 .navbarButtonsContainer{
     gap: 0.5rem;
     display: flex;
+
+}
+
+.navbarContainer{
+    position: fixed;
+    z-index: 10;
 }
 
 .navbarLinksContainer{
@@ -42,6 +48,8 @@
     border: 1px solid rgb(209, 213, 219); /* Equivalent to border in Tailwind */
     border-radius: 0; /* Equivalent to rounded-none in Tailwind */
     margin: auto;
+    backdrop-filter: blur(16px);
+    background: rgba(250, 250, 250, 0.5);
 }
 
 @media(min-width:786px){

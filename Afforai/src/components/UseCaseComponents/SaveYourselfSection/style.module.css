@@ -13,6 +13,7 @@
 .rowInner{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+    
 }
 
 .column{
@@ -50,6 +51,32 @@
     margin: 0px auto;
     width: 75%;
     max-width: 1440px;
+   }
+
+   .column{
+    align-items: center;
+    max-width: 720px;
+   }
+
+   .row{
+    margin-bottom: 80px;
+   }
+
+   .rowInner{
+    display: flex;
+    justify-content: center;
+   }
+
+   .heading,.description{
+    text-align: center;
+   }
+
+   .heading{
+    max-width: 556px;
+   }
+
+   .description{
+    line-height: 130%;
    }
 }
 

@@ -7,7 +7,7 @@ const HeadingSection = () => {
   return (
     <div className={styles.headingSectionContainer}>
       <div className={styles.headingSectionColumn}>
-        <div className="container-column">
+        <div className="container-column" style={{ zIndex: 2 }}>
           <h1 className={`mobile-left-text ${styles.title}`}>
             You second brain for maximizing productivity
           </h1>
