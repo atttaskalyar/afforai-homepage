@@ -1,0 +1,41 @@
+
+
+.whyChooseUsSection{
+    max-width: 1600px;
+    margin: 80px auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.textSection{
+    padding: 0px 0.75rem
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.heading{
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.description{
+    max-width: 417px;
+    color: rgb(82, 82, 82);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+}
+
+
+@media(min-width:786px){
+    
+}

@@ -5,3 +5,40 @@
 /* *{
     outline: 1px solid green;
 } */
+
+.container-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.mobile-left-text{
+    text-align: left;
+}
+
+.mobile{
+    display: block;
+}
+
+.desktop{
+    display: none;
+}
+
+.fill{
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:786px){
+    .mobile-left-text{
+        text-align: center;
+    }
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+}
+

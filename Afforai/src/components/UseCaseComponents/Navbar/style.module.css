@@ -20,14 +20,49 @@
     padding: 8px;
 }
 
+.navigationToggler{
+    display: block;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    color: #222;
+    cursor: pointer;
+    font-size: 33px;
+    line-height: 100%;
+}
 
+.navbarInnerContainer{
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1rem; /* Equivalent to px-6 in Tailwind */
+    padding-right: 1rem; /* Equivalent to px-6 in Tailwind */
+    padding-top: 1rem; /* Equivalent to py-2 in Tailwind */
+    padding-bottom: 1rem; /* Equivalent to py-2 in Tailwind */
+    border: 1px solid rgb(209, 213, 219); /* Equivalent to border in Tailwind */
+    border-radius: 0; /* Equivalent to rounded-none in Tailwind */
+    margin: auto;
+}
 
 @media(min-width:786px){
     .navbarContainer{
         padding: 1.5rem 3rem;
-        max-width: 1024px;
+   
+    }
+
+    .navbarInnerContainer{
+        border-radius: 0.75rem;
+        padding-left: 1.5rem; /* Equivalent to px-6 in Tailwind */
+        padding-right: 1.5rem; /* Equivalent to px-6 in Tailwind */
+        padding-top: 0.5rem; /* Equivalent to py-2 in Tailwind */
+        padding-bottom: 0.5rem; /* Equivalent to py-2 in Tailwind */
     }
     .navbarLinksContainer{
         display: flex;
     }
+    .navigationToggler{
+        display: none;
+       
+    }
+
 }

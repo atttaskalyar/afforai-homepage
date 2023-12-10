@@ -1,0 +1,55 @@
+.saveYourselfContainer{
+    max-width: 1600px;
+    margin: 80px auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.row{
+    margin-bottom: 40px;
+
+}
+
+.rowInner{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.heading{
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    margin-bottom: 1rem;
+}
+
+.description{
+    max-width: 556px;
+    color: rgb(82, 82, 82);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.imageContainer{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+@media(min-width:786px){
+   .imageContainer{
+    margin: 0px auto;
+    width: 75%;
+    max-width: 1440px;
+   }
+}
+
