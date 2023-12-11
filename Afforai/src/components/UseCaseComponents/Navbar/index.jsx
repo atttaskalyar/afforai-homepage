@@ -2,8 +2,9 @@ import PrimaryButton from "../../BaseComponents/Buttons/PrimaryButton";
 import SecondaryButton from "../../BaseComponents/Buttons/SecondaryButton";
 import Image from "../../BaseComponents/Images/Image";
 import styles from "./style.module.css";
+import { Links } from "./constants";
 
-const Navbar = (isMobile) => {
+const Navbar = () => {
   return (
     <>
       <div>
@@ -23,18 +24,13 @@ const Navbar = (isMobile) => {
                 <div>Afforai</div>
               </a>
               <div className={styles.navbarLinksContainer}>
-                <a className={styles.navbarLink} href="#">
-                  <span className={styles.navbarLinkText}>Affiliate</span>
-                </a>
-                <a className={styles.navbarLink} href="">
-                  <span className={styles.navbarLinkText}>Pricing</span>
-                </a>
-                <a className={styles.navbarLink} href="">
-                  <span className={styles.navbarLinkText}>Testimonials</span>
-                </a>
-                <a className={styles.navbarLink} href="">
-                  <span className={styles.navbarLinkText}>Help Center</span>
-                </a>
+                {Links.map((link, index) => {
+                  return (
+                    <a className={styles.navbarLink} href="#" key={index}>
+                      <span className={styles.navbarLinkText}>{link}</span>
+                    </a>
+                  );
+                })}
               </div>
               <div className={styles.navbarButtonsContainer}>
                 <SecondaryButton text={"Log In"} />
