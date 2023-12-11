@@ -9,6 +9,7 @@ import IntroductionSection from "./components/UseCaseComponents/IntroductionSect
 import SaveYourselfSection from "./components/UseCaseComponents/SaveYourselfSection";
 import WhyChooseUsSection from "./components/UseCaseComponents/WhyChooseUsSection";
 import MultipleChatBotsSection from "./components/UseCaseComponents/MultipleChatBotsSection";
+import FAQSection from "./components/UseCaseComponents/FAQSection";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <SaveYourselfSection />
         <WhyChooseUsSection />
         <MultipleChatBotsSection />
+        <FAQSection/>
       </Layout>
     </>
   );

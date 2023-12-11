@@ -1,5 +1,5 @@
 .headingSectionContainer{
-    max-width: 1600px;
+    max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
     padding: 24px 16px;
@@ -42,13 +42,26 @@
     display: none;
 }
 
+.sliderMobile{
+    display: flex;
+    gap: 24px;
+}
+
 .backgroundImage{
     display: none;
 }
 
+
+    .tagPointList{
+        display: flex;
+        gap: 24px;
+      }
+
+
 @media(min-width:786px){
     .headingSectionContainer{
         padding: 24px 60px;
+        max-width: 1600px;
     }
 
     .buttonsList{
@@ -84,4 +97,13 @@
     border-radius: 28px;
     overflow: hidden;
     }
+
+    .tagPointList{
+        width: 816px;
+        color: rgb(82, 82, 82);
+        font-size: 13px;
+        line-height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
 }

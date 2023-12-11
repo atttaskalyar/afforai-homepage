@@ -1,0 +1,30 @@
+.sliderContainer > * {
+    /* display: inline-block; */
+    animation: slideAnimation 15s linear infinite;
+    /* overflow: hidden; */
+
+
+  }
+
+  .sliderContainer{
+    
+  }
+
+
+  .sliderContainer::before,.sliderContainer::after{
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+  }
+
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Adjust the distance to slide */
+    }
+  }

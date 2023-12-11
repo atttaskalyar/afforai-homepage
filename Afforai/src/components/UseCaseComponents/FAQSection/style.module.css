@@ -1,0 +1,20 @@
+.container{
+    max-width: 1600px;
+    margin: 80px auto;
+    padding: 0 0.75rem;
+}
+
+
+.row{
+    margin-bottom: 48px;
+}
+
+.rowPadding{
+    padding: 0 0.75rem;
+    display: flex;
+}
+
+.textContainer{
+    padding: 0 0.75rem;
+    max-width: 540px;
+}

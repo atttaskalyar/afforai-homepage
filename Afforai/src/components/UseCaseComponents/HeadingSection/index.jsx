@@ -2,6 +2,8 @@ import PrimaryButton from "../../BaseComponents/Buttons/PrimaryButton";
 import SecondaryButton from "../../BaseComponents/Buttons/SecondaryButton";
 import styles from "./style.module.css";
 import Image from "../../BaseComponents/Images/Image";
+import TagPoint from "./TagPoint";
+import MovingSlider from "../MovingSlider";
 
 const HeadingSection = () => {
   return (
@@ -17,6 +19,25 @@ const HeadingSection = () => {
             lengthy research documents to stacks of dry compliance requirements
             and extract the key findings you need.
           </span>
+    
+    <MovingSlider containerClass={`mobile ${styles.sliderMobile}`}>
+    <div className={`${styles.tagPointList}`}>
+            <TagPoint text={"Summarize Key Findings"}/>
+            <TagPoint text={"Compare Between Documents"}/>
+            <TagPoint text={"Search For Answers"}/>
+            <TagPoint text={"Ask in Any Language"}/>
+          </div>
+    </MovingSlider>
+      <div className="desktop">
+
+          <div className={`${styles.tagPointList}`}>
+            <TagPoint text={"Summarize Key Findings"}/>
+            <TagPoint text={"Compare Between Documents"}/>
+            <TagPoint text={"Search For Answers"}/>
+            <TagPoint text={"Ask in Any Language"}/>
+          </div>
+      </div>
+          
           <div className={styles.buttonsList}>
             <PrimaryButton text={"Try for free"} />
             <SecondaryButton text={"View pricing"} />
