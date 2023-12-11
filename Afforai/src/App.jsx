@@ -1,15 +1,22 @@
 import "./App.css";
 import "./index.css";
 
-import Layout from "./components/Layout";
-import Home from "./pages/index";
+import React, { lazy, Suspense } from "react";
+
+// Lazy loading components
+const LazyLayout = lazy(() => import("./components/Layout"));
+const LazyHome = lazy(() => import("./pages/index"));
 
 function App() {
   return (
     <>
-      <Layout>
-        <Home />
-      </Layout>
+      <Suspense fallback="Loading App">
+        <LazyLayout>
+          <Suspense fallback="Loading content">
+            <LazyHome />
+          </Suspense>
+        </LazyLayout>
+      </Suspense>
     </>
   );
 }
