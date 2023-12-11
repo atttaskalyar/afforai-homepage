@@ -2,25 +2,13 @@ import "./App.css";
 import "./index.css";
 
 import Layout from "./components/Layout";
-import HeadingSection from "./components/UseCaseComponents/HeadingSection";
-import LovedBySection from "./components/UseCaseComponents/LovedBySection";
-import IntroductionSection from "./components/UseCaseComponents/IntroductionSection";
-import SaveYourselfSection from "./components/UseCaseComponents/SaveYourselfSection";
-import WhyChooseUsSection from "./components/UseCaseComponents/WhyChooseUsSection";
-import MultipleChatBotsSection from "./components/UseCaseComponents/MultipleChatBotsSection";
-import FAQSection from "./components/UseCaseComponents/FAQSection";
+import Home from "./pages/index";
 
 function App() {
   return (
     <>
       <Layout>
-        <HeadingSection />
-        <LovedBySection />
-        <IntroductionSection />
-        <SaveYourselfSection />
-        <WhyChooseUsSection />
-        <MultipleChatBotsSection />
-        <FAQSection />
+        <Home />
       </Layout>
     </>
   );
