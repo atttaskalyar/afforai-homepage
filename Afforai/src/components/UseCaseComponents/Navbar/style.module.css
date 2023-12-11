@@ -15,6 +15,8 @@
     position: fixed;
     z-index: 10;
     width: 100%;
+    border: 1px solid rgb(209, 213, 219);
+    backdrop-filter: blur(16px);
 }
 
 .navbarLinksContainer{
@@ -30,6 +32,13 @@
 
 .navbarLink{
     padding: 8px;
+}
+
+.navbarLinkMobile{
+    color: rgb(17, 17, 17);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .navigationToggler{
@@ -51,16 +60,18 @@
     padding-right: 1rem; /* Equivalent to px-6 in Tailwind */
     padding-top: 1rem; /* Equivalent to py-2 in Tailwind */
     padding-bottom: 1rem; /* Equivalent to py-2 in Tailwind */
-    border: 1px solid rgb(209, 213, 219); /* Equivalent to border in Tailwind */
+    border: none; /* Equivalent to border in Tailwind */
     border-radius: 0; /* Equivalent to rounded-none in Tailwind */
     margin: auto;
-    backdrop-filter: blur(16px);
+
     background: rgba(250, 250, 250, 0.5);
 }
 
 @media(min-width:786px){
     .navbarContainer{
         padding: 1.5rem 3rem;
+        border: none;
+        backdrop-filter: none;
    
     }
 
@@ -71,9 +82,12 @@
         padding-top: 0.5rem; /* Equivalent to py-2 in Tailwind */
         padding-bottom: 0.5rem; /* Equivalent to py-2 in Tailwind */
         max-width: 1264px;
+        border: 1px solid rgb(209, 213, 219);
+        backdrop-filter: blur(16px);
     }
     .navbarLinksContainer{
         display: flex;
+      
     }
     .navigationToggler{
         display: none;

@@ -3,8 +3,10 @@ import SecondaryButton from "../../BaseComponents/Buttons/SecondaryButton";
 import Image from "../../BaseComponents/Images/Image";
 import styles from "./style.module.css";
 import { Links } from "./constants";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div>
@@ -35,7 +37,10 @@ const Navbar = () => {
               <div className={styles.navbarButtonsContainer}>
                 <SecondaryButton text={"Log In"} />
                 <PrimaryButton text={"Try for free"} />
-                <div className={styles.navigationToggler}>
+                <div
+                  className={styles.navigationToggler}
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -57,6 +62,30 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            className="mobile"
+            style={{
+              display: isOpen ? "flex" : "none",
+              flexDirection: "column",
+
+              paddingLeft: "0.75rem",
+            }}
+          >
+            {Links.map((link, index) => {
+              return (
+                <a
+                  key={index}
+                  style={{
+                    marginLeft: "0.5rem",
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                  }}
+                >
+                  <span className={styles.navbarLinkMobile}>{link}</span>
+                </a>
+              );
+            })}
           </div>
         </nav>
         <div className={styles.navbarSpacer}></div>
