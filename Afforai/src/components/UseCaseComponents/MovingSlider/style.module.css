@@ -1,9 +1,13 @@
-.sliderContainer > * {
+.sliderContainer:nth-child(1) {
     /* display: inline-block; */
-    animation: slideAnimation 15s linear infinite;
+    animation: slideAnimation 20s linear infinite;
     /* overflow: hidden; */
 
 
+  }
+
+  .sliderContainer:nth-child(2){
+    animation: slideAnimation2 20s linear infinite;
   }
 
   .sliderContainer{
@@ -21,6 +25,15 @@
   }
 
   @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Adjust the distance to slide */
+    }
+  }
+
+  @keyframes slideAnimation2 {
     0% {
       transform: translateX(0);
     }

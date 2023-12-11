@@ -44,7 +44,7 @@
 
 .sliderMobile{
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
 }
 
 .backgroundImage{
@@ -54,7 +54,7 @@
 
     .tagPointList{
         display: flex;
-        gap: 24px;
+        /* gap: 24px; */
       }
 
 

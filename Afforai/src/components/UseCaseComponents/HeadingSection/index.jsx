@@ -19,25 +19,26 @@ const HeadingSection = () => {
             lengthy research documents to stacks of dry compliance requirements
             and extract the key findings you need.
           </span>
-    
-    <MovingSlider containerClass={`mobile ${styles.sliderMobile}`}>
-    <div className={`${styles.tagPointList}`}>
-            <TagPoint text={"Summarize Key Findings"}/>
-            <TagPoint text={"Compare Between Documents"}/>
-            <TagPoint text={"Search For Answers"}/>
-            <TagPoint text={"Ask in Any Language"}/>
+          <div className="mobile">
+            <MovingSlider containerClass={`mobile ${styles.sliderMobile}`}>
+              <div className={`${styles.tagPointList}`}>
+                <TagPoint text={"Summarize Key Findings"} />
+                <TagPoint text={"Compare Between Documents"} />
+                <TagPoint text={"Search For Answers"} />
+                <TagPoint text={"Ask in Any Language"} />
+              </div>
+            </MovingSlider>
           </div>
-    </MovingSlider>
-      <div className="desktop">
 
-          <div className={`${styles.tagPointList}`}>
-            <TagPoint text={"Summarize Key Findings"}/>
-            <TagPoint text={"Compare Between Documents"}/>
-            <TagPoint text={"Search For Answers"}/>
-            <TagPoint text={"Ask in Any Language"}/>
+          <div className="desktop">
+            <div className={`${styles.tagPointList}`}>
+              <TagPoint text={"Summarize Key Findings"} />
+              <TagPoint text={"Compare Between Documents"} />
+              <TagPoint text={"Search For Answers"} />
+              <TagPoint text={"Ask in Any Language"} />
+            </div>
           </div>
-      </div>
-          
+
           <div className={styles.buttonsList}>
             <PrimaryButton text={"Try for free"} />
             <SecondaryButton text={"View pricing"} />

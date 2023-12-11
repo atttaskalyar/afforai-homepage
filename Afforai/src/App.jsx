@@ -15,14 +15,13 @@ function App() {
   return (
     <>
       <Layout>
-        <Navbar />
         <HeadingSection />
         <LovedBySection />
         <IntroductionSection />
         <SaveYourselfSection />
         <WhyChooseUsSection />
         <MultipleChatBotsSection />
-        <FAQSection/>
+        <FAQSection />
       </Layout>
     </>
   );
