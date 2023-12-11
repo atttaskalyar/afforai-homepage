@@ -78,5 +78,9 @@
    .description{
     line-height: 130%;
    }
+
+   .saveYourselfContainer{
+    margin: 128px auto 160px;
+   }
 }
 

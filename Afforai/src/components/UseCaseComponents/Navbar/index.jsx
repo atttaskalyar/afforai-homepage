@@ -63,7 +63,7 @@ const Navbar = (isMobile) => {
             </div>
           </div>
         </nav>
-        <div style={{ opacity: 0, height: "68px" }}></div>
+        <div className={styles.navbarSpacer}></div>
       </div>
     </>
   );

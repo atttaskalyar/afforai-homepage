@@ -17,3 +17,9 @@
 .lovedByImage{
     height: 48px;
 }
+
+@media(min-width:786px){
+    .lovedBySectionContainer{
+        margin: 100px auto 128px
+    }
+}

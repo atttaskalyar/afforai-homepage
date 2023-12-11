@@ -1,3 +1,8 @@
+.navbarSpacer{
+    opacity: 0;
+    height: 68px;
+}
+
 
 
 .navbarButtonsContainer{
@@ -64,6 +69,7 @@
         padding-right: 1.5rem; /* Equivalent to px-6 in Tailwind */
         padding-top: 0.5rem; /* Equivalent to py-2 in Tailwind */
         padding-bottom: 0.5rem; /* Equivalent to py-2 in Tailwind */
+        max-width: 1264px;
     }
     .navbarLinksContainer{
         display: flex;
@@ -71,6 +77,10 @@
     .navigationToggler{
         display: none;
        
+    }
+
+    .navbarSpacer{
+        height: 107px;
     }
 
 }
