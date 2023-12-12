@@ -1,0 +1,26 @@
+.carouselContainer{
+    max-width: 800px;
+    margin: auto auto;
+    
+}
+
+.carouselTrack{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    gap: 12px;
+    user-select: none;
+    
+}
+
+
+.carouselElement{
+    display: flex;
+    gap: 12px;
+    margin: 30px 0px;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

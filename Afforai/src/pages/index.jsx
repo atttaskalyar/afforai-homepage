@@ -1,3 +1,4 @@
+import DraggableMovingSlider from "../components/UseCaseComponents/DraggableMovingSlider";
 import FAQSection from "../components/UseCaseComponents/FAQSection";
 import HeadingSection from "../components/UseCaseComponents/HeadingSection";
 import IntroductionSection from "../components/UseCaseComponents/IntroductionSection";
@@ -16,6 +17,23 @@ const index = () => {
       <WhyChooseUsSection />
       <MultipleChatBotsSection />
       <FAQSection />
+      <DraggableMovingSlider direction={"left"}>
+      <div style={{color:"red"}}>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      </DraggableMovingSlider>
     </>
   );
 };
