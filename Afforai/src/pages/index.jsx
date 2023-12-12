@@ -17,6 +17,24 @@ const index = () => {
       <WhyChooseUsSection />
       <MultipleChatBotsSection />
       <FAQSection />
+      <DraggableMovingSlider direction={"right"}>
+      <div style={{color:"red"}}>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      <div>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+      </DraggableMovingSlider>
+
       <DraggableMovingSlider direction={"left"}>
       <div style={{color:"red"}}>
         aaaaaaaaaaaaaaaaaaaaaaaaaaaaa

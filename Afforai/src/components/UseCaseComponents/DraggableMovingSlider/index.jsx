@@ -3,9 +3,20 @@ import { useRef, useState, useEffect } from "react";
 
 const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
 
+  
+
    //tracks the position of the X-co-ordinate where the dragging started
    const [previousPosX, setPreviousPosX] = useState();
    const [isMouseDown, setIsMouseDown] = useState(false);
+
+   let sliderDirection;
+
+   if(direction==="left"){
+      sliderDirection=1
+   }
+   if(direction==="right"){
+      sliderDirection=-1
+   }
 
    const elements = useRef();
 
@@ -36,7 +47,7 @@ const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
         intervalId = setInterval(
          () => {
          if(!isMouseDown){
-            elements.current.scrollLeft += 1*speed; 
+            elements.current.scrollLeft += 1*speed * sliderDirection; 
             if(elements.current.scrollLeft>=2*elementWidth){
                elements.current.scrollLeft= elements.current.scrollWidth/3;
             }
