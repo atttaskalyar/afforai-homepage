@@ -23,6 +23,23 @@
     justify-content: space-between;
 }
 
+.cardAuthorDetailsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.authorPicture{
+    width: 32px;
+    height: 32px;
+}
+
+.productHunt{
+    background: rgb(246, 232, 229);
+    border: 1px solid rgb(255, 60, 5);
+}
+
 @media(min-width:786px){
     .cardContainer{
         width: 600px;
