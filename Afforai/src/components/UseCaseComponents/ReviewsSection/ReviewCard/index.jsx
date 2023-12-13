@@ -1,8 +1,14 @@
 import styles from "./style.module.css";
 
-const ReviewCard = () => {
+const ReviewCard = ({ style }) => {
   return (
-    <div className={styles.cardContainer}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div className={styles.cardContainer} style={style}>
+      <div className={styles.cardText}>
+        Placeholder text for the review. This is placeholder text that can be
+        used for this review card
+      </div>
+      <div className={styles.cardAuthorContainer}></div>
+    </div>
   );
 };
 

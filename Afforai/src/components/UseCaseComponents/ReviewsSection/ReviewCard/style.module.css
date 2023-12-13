@@ -4,4 +4,32 @@
     padding: 16px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }
+
+.cardText{
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    flex-grow: 1;
+}
+
+.cardAuthorContainer{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(min-width:786px){
+    .cardContainer{
+        width: 600px;
+        height: 266px;
+        padding: 32px;
+        border: 1px solid rgb(230, 230, 230);
+    }
+        
+    }
+

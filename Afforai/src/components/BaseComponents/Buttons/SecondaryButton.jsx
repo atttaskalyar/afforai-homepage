@@ -1,8 +1,12 @@
 import styles from "./index.module.css";
 
-const SecondaryButton = ({ text, handleClick }) => {
+const SecondaryButton = ({ text, handleClick, style }) => {
   return (
-    <button className={styles.secondaryButton} onClick={handleClick}>
+    <button
+      className={styles.secondaryButton}
+      onClick={handleClick}
+      style={style}
+    >
       {text}
     </button>
   );

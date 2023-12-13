@@ -1,8 +1,12 @@
 import styles from "./index.module.css";
 
-const PrimaryButton = ({ text, handleClick, width, height }) => {
+const PrimaryButton = ({ text, handleClick, style }) => {
   return (
-    <button className={styles.primaryButton} onClick={handleClick} style={{width:width, height:height}}>
+    <button
+      className={styles.primaryButton}
+      onClick={handleClick}
+      style={style}
+    >
       {text}
     </button>
   );
