@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import DraggableMovingSlider from "../DraggableMovingSlider";
+import ReviewCard from "./ReviewCard";
 
 const ReviewSection = () => {
   return (
@@ -8,29 +9,23 @@ const ReviewSection = () => {
         direction={"right"}
         containerClass={styles.carouselContainer}
       >
-        <div style={{ color: "red" }}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
       </DraggableMovingSlider>
 
       <DraggableMovingSlider direction={"left"}>
-        <div style={{ color: "red" }}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
       </DraggableMovingSlider>
     </div>
   );
