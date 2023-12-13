@@ -4,6 +4,7 @@ import HeadingSection from "../components/UseCaseComponents/HeadingSection";
 import IntroductionSection from "../components/UseCaseComponents/IntroductionSection";
 import LovedBySection from "../components/UseCaseComponents/LovedBySection";
 import MultipleChatBotsSection from "../components/UseCaseComponents/MultipleChatBotsSection";
+import ReviewSection from "../components/UseCaseComponents/ReviewsSection";
 import SaveYourselfSection from "../components/UseCaseComponents/SaveYourselfSection";
 import WhyChooseUsSection from "../components/UseCaseComponents/WhyChooseUsSection";
 
@@ -17,41 +18,7 @@ const index = () => {
       <WhyChooseUsSection />
       <MultipleChatBotsSection />
       <FAQSection />
-      <DraggableMovingSlider direction={"right"}>
-      <div style={{color:"red"}}>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      </DraggableMovingSlider>
-
-      <DraggableMovingSlider direction={"left"}>
-      <div style={{color:"red"}}>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      <div>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </div>
-      </DraggableMovingSlider>
+     <ReviewSection/>
     </>
   );
 };

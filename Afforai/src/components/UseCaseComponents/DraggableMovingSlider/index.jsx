@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import { useRef, useState, useEffect } from "react";
 
-const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
+const DraggableMovingSlider = ({children, direction, speed, dragSpeed, containerClass}) => {
 
   
 
@@ -39,8 +39,13 @@ const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
 
     useEffect(() => {
       let intervalId;
-      
-      elements.current.scrollLeft= elements.current.scrollWidth/3;
+      if(direction==="left"){
+
+         elements.current.scrollLeft= elements.current.scrollWidth/3;
+      }
+      if(direction==="right"){
+         elements.current.scrollLeft =elements.current.scrollWidth/3 *2;
+      }
       let elementWidth = elements.current.scrollWidth/3;
 
       const autoScroll = () => {
@@ -48,8 +53,15 @@ const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
          () => {
          if(!isMouseDown){
             elements.current.scrollLeft += 1*speed * sliderDirection; 
-            if(elements.current.scrollLeft>=2*elementWidth){
-               elements.current.scrollLeft= elements.current.scrollWidth/3;
+            if(direction==="left"){
+               if(elements.current.scrollLeft>=2*elementWidth){
+                  elements.current.scrollLeft= elements.current.scrollWidth/3;
+               }
+            }
+            if(direction==="right"){
+               if(elements.current.scrollLeft<=elementWidth){
+                  elements.current.scrollLeft =elements.current.scrollWidth/3 *2;
+               }
             }
          }
         }, 10);
@@ -71,7 +83,7 @@ const DraggableMovingSlider = ({children, direction, speed, dragSpeed}) => {
 
 
 return  <div className={styles.carouselContainer}>
-    <div className={styles.carouselTrack} ref={elements} onMouseMove={handleDrag} onMouseDown={handleOnMouseDown} onMouseUp={()=>setIsMouseDown(false)}>
+    <div className={styles.carouselTrack} ref={elements} onMouseMove={handleDrag} onMouseDown={handleOnMouseDown} onMouseUp={()=>setIsMouseDown(false)} onMouseLeave={()=>setIsMouseDown(false)}> 
       <div className={styles.carouselElement}>
       {children}
       </div>
