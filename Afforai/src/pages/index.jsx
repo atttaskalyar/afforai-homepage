@@ -18,7 +18,7 @@ const index = () => {
       <WhyChooseUsSection />
       <MultipleChatBotsSection />
       <FAQSection />
-     <ReviewSection/>
+      <ReviewSection />
     </>
   );
 };

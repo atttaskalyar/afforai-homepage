@@ -1,5 +1,5 @@
 .container{
-    max-width: 1600px;
+    width: 100%;
     margin: 80px auto;
     padding: 0 0.75rem;
 }
@@ -7,4 +7,12 @@
 
 .carouselContainer{
     max-width: 100%;
+    overflow: hidden;
+}
+
+
+@media(min-width:786px){
+    .container{
+        max-width: 1600px;
+    }
 }
