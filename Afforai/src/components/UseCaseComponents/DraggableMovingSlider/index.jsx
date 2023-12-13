@@ -1,111 +1,126 @@
 import styles from "./style.module.css";
 import { useRef, useState, useEffect } from "react";
 
-const DraggableMovingSlider = ({children, direction, speed, dragSpeed, containerClass}) => {
+const DraggableMovingSlider = ({
+  children,
+  direction,
+  speed,
+  dragSpeed,
+  containerClass,
+  containerStyle,
+  trackClass,
+  elementClass,
+  elementStyle,
+}) => {
+  //tracks the position of the X-co-ordinate where the dragging started
+  const [previousPosX, setPreviousPosX] = useState();
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
-  
+  let sliderDirection;
 
-   //tracks the position of the X-co-ordinate where the dragging started
-   const [previousPosX, setPreviousPosX] = useState();
-   const [isMouseDown, setIsMouseDown] = useState(false);
+  if (direction === "left") {
+    sliderDirection = 1;
+  }
+  if (direction === "right") {
+    sliderDirection = -1;
+  }
 
-   let sliderDirection;
+  const elements = useRef();
 
-   if(direction==="left"){
-      sliderDirection=1
-   }
-   if(direction==="right"){
-      sliderDirection=-1
-   }
+  const handleDrag = (e) => {
+    if (isMouseDown) {
+      const offset = previousPosX - e.clientX;
+      elements.current.scrollLeft = (offset + previousPosX) * dragSpeed;
+    }
+  };
 
-   const elements = useRef();
+  const handleOnMouseDown = (e) => {
+    setPreviousPosX(e.clientX);
+    setIsMouseDown(true);
+  };
 
+  useEffect(() => {
+    let intervalId;
+    if (direction === "left") {
+      elements.current.scrollLeft = elements.current.scrollWidth / 3;
+    }
+    if (direction === "right") {
+      elements.current.scrollLeft = (elements.current.scrollWidth / 3) * 2;
+    }
+    let elementWidth = elements.current.scrollWidth / 3;
 
-   const handleDrag = (e) => {
-      if(isMouseDown){
-         const offset = previousPosX - e.clientX
-         elements.current.scrollLeft = (offset +previousPosX) * dragSpeed;
-      }
+    const autoScroll = () => {
+      intervalId = setInterval(() => {
+        if (!isMouseDown) {
+          elements.current.scrollLeft += 1 * speed * sliderDirection;
+          if (direction === "left") {
+            if (elements.current.scrollLeft >= 2 * elementWidth) {
+              elements.current.scrollLeft = elements.current.scrollWidth / 3;
+            }
+          }
+          if (direction === "right") {
+            if (elements.current.scrollLeft <= elementWidth) {
+              elements.current.scrollLeft =
+                (elements.current.scrollWidth / 3) * 2;
+            }
+          }
+        }
+      }, 10);
     };
 
-    const handleOnMouseDown = (e)=>{
-         setPreviousPosX(e.clientX)
-         setIsMouseDown(true)
-    }
+    const stopAutoScroll = () => {
+      clearInterval(intervalId);
+    };
 
+    // Start automatic scrolling by default
+    autoScroll();
 
+    // Clear interval on unmount or when component is not focused
+    return () => {
+      stopAutoScroll();
+    };
+  }, []);
 
-
-
-    useEffect(() => {
-      let intervalId;
-      if(direction==="left"){
-
-         elements.current.scrollLeft= elements.current.scrollWidth/3;
-      }
-      if(direction==="right"){
-         elements.current.scrollLeft =elements.current.scrollWidth/3 *2;
-      }
-      let elementWidth = elements.current.scrollWidth/3;
-
-      const autoScroll = () => {
-        intervalId = setInterval(
-         () => {
-         if(!isMouseDown){
-            elements.current.scrollLeft += 1*speed * sliderDirection; 
-            if(direction==="left"){
-               if(elements.current.scrollLeft>=2*elementWidth){
-                  elements.current.scrollLeft= elements.current.scrollWidth/3;
-               }
-            }
-            if(direction==="right"){
-               if(elements.current.scrollLeft<=elementWidth){
-                  elements.current.scrollLeft =elements.current.scrollWidth/3 *2;
-               }
-            }
-         }
-        }, 10);
-      };
-  
-      const stopAutoScroll = () => {
-        clearInterval(intervalId);
-      };
-  
-      // Start automatic scrolling by default
-      autoScroll();
-  
-      // Clear interval on unmount or when component is not focused
-      return () => {
-        stopAutoScroll();
-      };
-    }, []);
-
-
-
-return  <div className={styles.carouselContainer}>
-    <div className={styles.carouselTrack} ref={elements} onMouseMove={handleDrag} onMouseDown={handleOnMouseDown} onMouseUp={()=>setIsMouseDown(false)} onMouseLeave={()=>setIsMouseDown(false)}> 
-      <div className={styles.carouselElement}>
-      {children}
-      </div>
-      <div className={styles.carouselElement}>
-      {children}
-      </div>
-      <div className={styles.carouselElement}>
-      {children}
+  return (
+    <div
+      className={`${styles.carouselContainer} ${containerClass}`}
+      style={containerStyle}
+    >
+      <div
+        className={`${styles.carouselTrack}`}
+        ref={elements}
+        onMouseMove={handleDrag}
+        onMouseDown={handleOnMouseDown}
+        onMouseUp={() => setIsMouseDown(false)}
+        onMouseLeave={() => setIsMouseDown(false)}
+      >
+        <div
+          className={`${styles.carouselElement} ${elementClass}`}
+          style={elementStyle}
+        >
+          {children}
+        </div>
+        <div
+          className={`${styles.carouselElement} ${elementClass}`}
+          style={elementStyle}
+        >
+          {children}
+        </div>
+        <div
+          className={`${styles.carouselElement} ${elementClass}`}
+          style={elementStyle}
+        >
+          {children}
+        </div>
       </div>
     </div>
-
- </div>
-
-
-
-
+  );
 };
 
-DraggableMovingSlider.defaultProps={
-   direction:"left",
-   speed:1,
-   dragSpeed:1,
-}
+DraggableMovingSlider.defaultProps = {
+  direction: "left",
+  speed: 1,
+  dragSpeed: 1,
+};
 
 export default DraggableMovingSlider;
